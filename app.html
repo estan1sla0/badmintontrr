@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Entrenamientos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center">Planilla de Entrenamientos</h2>
+    <form id="formEntrenamiento" class="row g-3 mb-4">
+      <div class="col-md-3"><input type="date" id="fecha" class="form-control" required /></div>
+      <div class="col-md-3"><select id="categoria" class="form-select"><option>Adultos</option><option>Juveniles</option></select></div>
+      <div class="col-md-3"><select id="tipoTrabajo" class="form-select"><option>Multipluma</option><option>Consistencia</option><option>Partidos</option></select></div>
+      <div class="col-md-3"><select id="modalidad" class="form-select"><option>Singles</option><option>Dobles</option><option>Dobles Mixto</option></select></div>
+      <div class="col-md-3"><select id="carga" class="form-select"><option>30%</option><option>60%</option><option>90%</option></select></div>
+      <div class="col-md-9"><textarea id="descripcion" class="form-control" rows="2" placeholder="Descripción" required></textarea></div>
+      <div class="col-12 text-end"><button class="btn btn-success">Guardar</button></div>
+    </form>
+    <table class="table table-bordered"><thead class="table-light"><tr><th>Fecha</th><th>Categoría</th><th>Trabajo</th><th>Modalidad</th><th>Carga</th><th>Descripción</th><th>Acciones</th></tr></thead><tbody id="tablaEntrenamientos"></tbody></table>
+  </div>
+  <script src="js/app.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</body>
+</html>
